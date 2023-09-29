@@ -28,10 +28,11 @@ export default function LoginPage({}: Props) {
   const onLogin = async() => {
         try {
           setLoading(true);
-          const response = await axios.post("/api/users/signup", user);
-          console.log("user login", response);
+          const response = await axios.post("/api/users/login", user);
+          console.log("user login", response.data); 
+           toast.success("welcome")
           router.push("/profile");
-          toast.success("welcome")
+        
         } catch (err: any) {
           console.log("login failed", err.message);
           toast.error(err.message);
@@ -45,7 +46,7 @@ export default function LoginPage({}: Props) {
       <div className="flex flex-col my-5">
         <label htmlFor="email">Email</label>
         <input
-          className="p-2 rounded-sm"
+          className="p-2 rounded-sm text-black"
           type="email"
           id="email"
           name="email"
@@ -55,7 +56,7 @@ export default function LoginPage({}: Props) {
           }}
         />
       </div>
-      <div className="flex flex-col ">
+      <div className="flex flex-col text-black ">
         <label htmlFor="password">Password</label>
         <input
           className="p-2 rounded-sm"

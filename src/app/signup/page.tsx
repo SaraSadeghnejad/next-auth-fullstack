@@ -48,7 +48,7 @@ export default function SingupPage({}: Props) {
           id="username"
           name="username"
           placeholder="Username"
-          className="p-2 rounded-sm"
+          className="p-2 rounded-sm text-black"
           onChange={(e: any) => {
             setUser({ ...user, username: e.target.value });
           }}
@@ -61,7 +61,7 @@ export default function SingupPage({}: Props) {
           id="email"
           name="email"
           placeholder="Email"
-          className="p-2 rounded-sm"
+          className="p-2 rounded-sm text-black"
           onChange={(e: any) => {
             setUser({ ...user, email: e.target.value });
           }}
@@ -74,7 +74,7 @@ export default function SingupPage({}: Props) {
           id="password"
           name="password"
           placeholder="Password"
-          className="p-2 rounded-sm"
+          className="p-2 rounded-sm text-black"
           onChange={(e: any) => {
             setUser({ ...user, password: e.target.value });
           }}
